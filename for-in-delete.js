@@ -40,7 +40,11 @@
 */
 
 function showValues( obj ) {
-  //Code Here
+ let result = "";
+ for (let prop in obj){
+   result += obj[prop]
+ }
+ return result;
 }
 
 
@@ -49,13 +53,21 @@ function showValues( obj ) {
 
 /*
   Write a function called greaterThan10 that takes in an object. 
-  Write a for in loop that loops over the object and changes any value that is greater than 10 to 0. 
+  Write a for in loop that loops over the object and changes any 
+  value that is greater than 10 to 0. 
   Return the updated object.
 */
 
 //Code Here
 
-
+function greaterThan10(obj){
+  for (let key in obj){
+    if (obj[key] > 10){
+      obj[key] = 0;
+    }
+  }
+  return obj;
+}
 
 ////////// PROBLEM 3 //////////
 
